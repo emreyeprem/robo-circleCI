@@ -20,12 +20,12 @@ jobs:
      steps:
        - checkout
        - run: echo "Hellloooo!"
-workflows:
-  version: 2
-  build-test-and-lint:
-    jobs:
-      - build
-      - hithere
-      - test:
-          requires:
-            - hithere
+    workflows:
+      version: 2
+      build-test-and-lint:
+        jobs:
+          - build
+          - hithere
+          - test:
+              requires:
+                - hithere
