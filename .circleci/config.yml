@@ -14,18 +14,18 @@ jobs:
        - checkout
        - run: npm install
        - run: npm run test
-   hithere:
+   heythere:
      docker:
        - image: circleci/node:latest
      steps:
        - checkout
-       - run: echo "Hellloooo!"
+       - run: echo "Hellloo!"
 workflows:
   version: 2
   build-test-and-lint:
     jobs:
       - build
-      - hithere
+      - heythere
       - test:
           requires:
-            - hithere
+            - heythere
