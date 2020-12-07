@@ -25,7 +25,7 @@ workflows:
   build-test-and-lint:
     jobs:
       - build
-      - hithere
+      - heythere
       - test:
           requires:
-            - hithere
+            - heythere
